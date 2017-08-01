@@ -1,2 +1,5 @@
-# Mago-css
-Mago-front-end-framework Libraries CSS
+# Mago CSS Framework Version 1
+มาโก้ซีเอสเอส ขอบเขตการใช้งานมาโก้
+   - ห้ามใช้ในการขาย
+   - ห้ามใช้เป็นลิขสิทธ์ตัวเอง
+   - ห้ามนำไปเผยแพร่ในทางที่ผิด
