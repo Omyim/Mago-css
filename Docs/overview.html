@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Overview & MAGO Design : designed by team Omyim Inc. [TH]</title>
+	
+	<!--
+		
+		|##|###########|##|
+		|##|###########|##|
+		|##|	####   |##|
+		|##|	####   |##|
+		|##|	####   |##|
+		|##|	####   |##|	
+
+		Designed By : <omyim.inc@gmail.com>
+
+	-->
+
+	<!-- StyleSheets -->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/output.css">
+	<link rel="stylesheet" href="../css/button.css">
+	<link rel="stylesheet" href="../css/navbar.css">
+	<link rel="stylesheet" href="../css/grid-system.css">
+	<link rel="stylesheet" href="../css/forms.css">
+	<link rel="stylesheet" href="../css/helpers.css">
+	<link rel="stylesheet" href="../css/breadcrumb.css">
+	<link rel="stylesheet" href="../css/navtab.css">
+	<link rel="stylesheet" href="../css/card.css">
+
+	<!-- JavaScripts -->
+	<script type="text/javascript" src="../js/html5shiv.min.js"></script>
+	<script type="text/javascript" src="../js/html5shiv-printshiv.min.js"></script>
+
+	<!-- Style -->
+	<style type="text/css">
+		body {
+			background-image: url(img/background.jpg); 
+		}
+	</style>
+	<style type="text/css">
+		.matrix { 
+			font-family: Lucida Console, Courier, Monotype; 
+			font-size: 10pt; 
+			text-align: center; 
+			width: 10px;
+			padding: 0px; 
+			margin: 0 auto;
+		}
+	</style>
+		<script type="text/javascript" language="JavaScript">
+	var rows=11; // must be an odd number
+	var speed=50; // lower is faster
+	var reveal=2; // between 0 and 2 only. The higher, the faster the word appears
+	var effectalign="default" //enter "center" to center it.
+
+	var w3c=document.getElementById && !window.opera;;
+	var ie45=document.all && !window.opera;
+	var ma_tab, matemp, ma_bod, ma_row, x, y, columns, ma_txt, ma_cho;
+	var m_coch=new Array();
+	var m_copo=new Array();
+	window.onload=function() {
+		if (!w3c && !ie45) return
+	  var matrix=(w3c)?document.getElementById("matrix"):document.all["matrix"];
+	  ma_txt=(w3c)?matrix.firstChild.nodeValue:matrix.innerHTML;
+	  ma_txt=" "+ma_txt+" ";
+	  columns=ma_txt.length;
+	  if (w3c) {
+	    while (matrix.childNodes.length) matrix.removeChild(matrix.childNodes[0]);
+	    ma_tab=document.createElement("table");
+	    ma_tab.setAttribute("border", 0);
+	    ma_tab.setAttribute("align", effectalign);
+	    ma_tab.style.backgroundColor="#000000";
+	    ma_bod=document.createElement("tbody");
+	    for (x=0; x<rows; x++) {
+	      ma_row=document.createElement("tr");
+	      for (y=0; y<columns; y++) {
+	        matemp=document.createElement("td");
+	        matemp.setAttribute("id", "Mx"+x+"y"+y);
+	        matemp.className="matrix";
+	        matemp.appendChild(document.createTextNode(String.fromCharCode(160)));
+	        ma_row.appendChild(matemp);
+	      }
+	      ma_bod.appendChild(ma_row);
+	    }
+	    ma_tab.appendChild(ma_bod);
+	    matrix.appendChild(ma_tab);
+	  } else {
+	    ma_tab='<ta'+'ble align="'+effectalign+'" border="0" style="background-color:#000000">';
+	    for (var x=0; x<rows; x++) {
+	      ma_tab+='<t'+'r>';
+	      for (var y=0; y<columns; y++) {
+	        ma_tab+='<t'+'d class="matrix" id="Mx'+x+'y'+y+'"> </'+'td>';
+	      }
+	      ma_tab+='</'+'tr>';
+	    }
+	    ma_tab+='</'+'table>';
+	    matrix.innerHTML=ma_tab;
+	  }
+	  ma_cho=ma_txt;
+	  for (x=0; x<columns; x++) {
+	    ma_cho+=String.fromCharCode(32+Math.floor(Math.random()*94));
+	    m_copo[x]=0;
+	  }
+	  ma_bod=setInterval("mytricks()", speed);
+	}
+
+	function mytricks() {
+	  x=0;
+	  for (y=0; y<columns; y++) {
+	    x=x+(m_copo[y]==100);
+	    ma_row=m_copo[y]%100;
+	    if (ma_row && m_copo[y]<100) {
+	      if (ma_row<rows+1) {
+	        if (w3c) {
+	          matemp=document.getElementById("Mx"+(ma_row-1)+"y"+y);
+	          matemp.firstChild.nodeValue=m_coch[y];
+	        }
+	        else {
+	          matemp=document.all["Mx"+(ma_row-1)+"y"+y];
+	          matemp.innerHTML=m_coch[y];
+	        }
+	        matemp.style.color="#33ff66";
+	        matemp.style.fontWeight="bold";
+	      }
+	      if (ma_row>1 && ma_row<rows+2) {
+	        matemp=(w3c)?document.getElementById("Mx"+(ma_row-2)+"y"+y):document.all["Mx"+(ma_row-2)+"y"+y];
+	        matemp.style.fontWeight="normal";
+	        matemp.style.color="#00ff00";
+	      }
+	      if (ma_row>2) {
+	          matemp=(w3c)?document.getElementById("Mx"+(ma_row-3)+"y"+y):document.all["Mx"+(ma_row-3)+"y"+y];
+	        matemp.style.color="#009900";
+	      }
+	      if (ma_row<Math.floor(rows/2)+1) m_copo[y]++;
+	      else if (ma_row==Math.floor(rows/2)+1 && m_coch[y]==ma_txt.charAt(y)) zoomer(y);
+	      else if (ma_row<rows+2) m_copo[y]++;
+	      else if (m_copo[y]<100) m_copo[y]=0;
+	    }
+	    else if (Math.random()>0.9 && m_copo[y]<100) {
+	      m_coch[y]=ma_cho.charAt(Math.floor(Math.random()*ma_cho.length));
+	      m_copo[y]++;
+	    }
+	  }
+	  if (x==columns) clearInterval(ma_bod);
+	}
+
+	function zoomer(ycol) {
+	  var mtmp, mtem, ytmp;
+	  if (m_copo[ycol]==Math.floor(rows/2)+1) {
+	    for (ytmp=0; ytmp<rows; ytmp++) {
+	      if (w3c) {
+	        mtmp=document.getElementById("Mx"+ytmp+"y"+ycol);
+	        mtmp.firstChild.nodeValue=m_coch[ycol];
+	      }
+	      else {
+	        mtmp=document.all["Mx"+ytmp+"y"+ycol];
+	        mtmp.innerHTML=m_coch[ycol];
+	      }
+	      mtmp.style.color="#33ff66";
+	      mtmp.style.fontWeight="bold";
+	    }
+	    if (Math.random()<reveal) {
+	      mtmp=ma_cho.indexOf(ma_txt.charAt(ycol));
+	      ma_cho=ma_cho.substring(0, mtmp)+ma_cho.substring(mtmp+1, ma_cho.length);
+	    }
+	    if (Math.random()<reveal-1) ma_cho=ma_cho.substring(0, ma_cho.length-1);
+	    m_copo[ycol]+=199;
+	    setTimeout("zoomer("+ycol+")", speed);
+	  }
+	  else if (m_copo[ycol]>200) {
+	    if (w3c) {
+	      mtmp=document.getElementById("Mx"+(m_copo[ycol]-201)+"y"+ycol);
+	      mtem=document.getElementById("Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol);
+	    }
+	    else {
+	      mtmp=document.all["Mx"+(m_copo[ycol]-201)+"y"+ycol];
+	      mtem=document.all["Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol];
+	    }
+	    mtmp.style.fontWeight="normal";
+	    mtem.style.fontWeight="normal";
+	    setTimeout("zoomer("+ycol+")", speed);
+	  }
+	  else if (m_copo[ycol]==200) m_copo[ycol]=100+Math.floor(rows/2);
+	  if (m_copo[ycol]>100 && m_copo[ycol]<200) {
+	    if (w3c) {
+	      mtmp=document.getElementById("Mx"+(m_copo[ycol]-101)+"y"+ycol);
+	      mtmp.firstChild.nodeValue=String.fromCharCode(160);
+	      mtem=document.getElementById("Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol);
+	      mtem.firstChild.nodeValue=String.fromCharCode(160);
+	    }
+	    else {
+	      mtmp=document.all["Mx"+(m_copo[ycol]-101)+"y"+ycol];
+	      mtmp.innerHTML=String.fromCharCode(160);
+	      mtem=document.all["Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol];
+	      mtem.innerHTML=String.fromCharCode(160);
+	    }
+	    setTimeout("zoomer("+ycol+")", speed);
+	  }
+	}
+	</script>
+</head>
+<body>
+	<div class="text-fixed-top-left">
+		<h3>&nbsp;Mago Develope with Slimer CSS <small>ทำมาเฉพาะหน้าจอใหญ่</small></h3>
+	</div>
+	<div class="mg-t-30"></div>
+	<div class="clearfix"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-10">
+				<nav class="navbar navbar-inverse">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a href="https://www.github.com/Omyim/mago-css" class="navbar-link">Mago</a>
+						</div>
+						<ul class="navbar-menu navbar-right">
+							<li>
+								<a href="JavaScript: void(0);">ผู้พัฒนา</a>
+								<ul class="navbar-dropdown">
+									<li><a href="#framy">@Framy</a></li>
+									<li><a href="https://www.facebook.com/OMYIM-329703177473578/notifications/">ทีมงาน Omyim Inc.</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3">
+				<ul class="nav nav-vertical nav-inverse">
+					<li><strong><span>รายการเมนู</span></strong></li>
+					<li><a href="overview.html">Overview</a></li>
+					<li><a href="component.html">Component</a></li>
+					<li><a href="https://www.facebook.com/OMYIM-329703177473578/notifications/">Facebook</a></li>
+				</ul>
+				<div class="mg-t-10"></div>
+				<div class="card card-primary" style="width: 100%;">
+					<div class="card-header">
+						<strong>About Framy</strong>
+					</div>
+					<div class="card-body text-center">
+						<img src="img/author-framy.jpg" alt="Kittichai Malain" title="กิตติชัย มาละอินทร์" class="img-center" width="105px" style="margin-bottom: 5px;">
+						<strong>Kittichai Malain</strong>
+						<p>
+							ใน ฐานะที่เป็นผู้ควบคุมทีม ฮาตาริ อมยิ้ม เขาได้ทำงานและพัฒนาสิ่งที่ใช้สร้างเว็บอย่างมากมายเหลือล้นแต่เขาไม่ทราบว่าจะนำตัวไหนมาเผยแพร่บ้าง ใน วันนี้เขาได้เริ่มปล่อยผลงานเขาออกมาเรื่อยๆครับ ตัวนี้คือตัวที่ 3 ที่เขาปล่อยออกมา
+						</p>
+						<p>
+							<strong>ดูผลงานเขาได้ที่ : <a href="https://www.github.com/Omyim/">Github</a></strong>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-7">
+				<div class="card card-default">
+					<div class="card-header">
+						<h2>Overview</h2>
+					</div>
+					<div class="card-body">
+						<center><div id="matrix">มาโก้ ซีเอสเอส</div></center>
+						ภาพรวมของไลบรารีย์ตัวนี้ก็จัดได้ว่า รวดเร็วใช้งานง่ายไม่ต้องรอเยอะเท่าไหร่ มีการแยกไฟล์ให้ท่านได้นำไปศึกษาและโค้ดก็ดูแบบบ้านๆ ไม่ได้ยุ่งยากอะไร และก็มีประสิทธิภาพ รองรับ IE หลายเวอร์ชั่นโดยเฉพาะ Google Chrome ใช้งานแล้วจะออกมาดีมากหน้าตาเว็บทุกเว็บที่ใช้ของเราจะออกมาเหมือนกันทั้งนั้น ในเวอร์ชั่นต่อๆจะมีสิ่งที่ท่านต้องการแฝงอยู่ในนี้แน่นอน อาจจะมีการเพิ่มธีมของ Navbar ให้มากขึ้นเพิ่มรูปแบบให้เลือกเช่น Flat Design แต่ในเวอร์ชั่นนี้ เรามีสองรูปแบบในเวอร์ชั่นเดียวคือรูปแบบปกติและ Flat design ครับให้ท่านลองสังเกตุดูแต่ละตัวเลือกที่เรามีให้ใช้สีจะแตกต่างกันอย่างสิ้นเชิง และมีการเรียกใช้งานคลาสแต่ละคลาสได้อย่างง่าย และนอกจากนี้เรายังทำการรวมไฟล์ไว้ให้ท่านแล้ว ไฟล์มีชื่อว่า mago.css
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

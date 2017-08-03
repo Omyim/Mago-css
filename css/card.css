@@ -1,0 +1,124 @@
+/**
+	* Card panel
+	* by Kittichai malain
+*/
+
+.card {
+	display: block;
+	position: relative;
+	padding: 0;
+	border: 1px solid trasparent;
+
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	width: 95%;
+	margin: 0 auto;
+	line-height: 1.65em;
+}
+
+.card-header {
+	display: block;
+	position: relative;
+	border-bottom: 1px solid trasparent;
+	padding: 8px 11px;
+	background: transparent;
+
+	-webkit-border-radius: 6px 6px 0 0;
+	-moz-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+}
+
+.card-body {
+	display: block;
+	position: relative;
+	background: transparent;
+	padding: 12px 13px;
+
+	-webkit-border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+}
+
+.card-default {
+	background: #f5f5f5;
+	color: #333;
+	border: 1px solid #ccc;
+}
+
+.card-default .card-header {
+	background-color: #eee;
+	background-image: -webkit-linear-gradient(#fff, #f5f5f5);
+	background-image: -moz-linear-gradient(#fff, #f5f5f5);
+	background-image: linear-gradient(#fff, #f5f5f5);
+	color: #222;
+	border-bottom: 1px solid #ccc;
+}
+
+.card-default .card-body {
+	background: #fff;
+	color: #333;
+}
+
+.card-primary {
+	background: #0668d6;
+	color: #fff;
+	border: 1px solid #0668d6;
+}
+
+.card-primary .card-header {
+	background: #0668d6;
+}
+
+* .card-body {
+	background: #fff;
+	color: #333;
+}
+
+.card-success {
+	background: #4ebf21;
+	color: #fff;
+	border: 1px solid #4ebf21;
+}
+
+.card-success .card-header {
+	background: #4ebf21;
+}
+
+.card-info {
+	background: #37b1cc;
+	color: #fff;
+	border: 1px solid #37b1cc;
+}
+
+.card-info .card-header {
+	background: #37b1cc;
+}
+
+.card-warning {
+	background: #c4c52d;
+	color: #fff;
+	border: 1px solid #c4c52d;
+}
+
+.card-warning .card-header {
+	background: #c4c52d;
+}
+
+.card-danger {
+	background: #bf3e3e;
+	color: #fff;
+	border: 1px solid #bf3e3e;
+}
+
+.card-danger .card-header {
+	background: #bf3e3e;
+}
+
+* .card-header {
+	color: #fff;
+}
+
+.card-default .card-header {
+	color: #333;
+}

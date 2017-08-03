@@ -1,0 +1,103 @@
+/**
+	* Forms and Elements
+	* by Kittichai malain
+*/
+
+form {
+	display: block;
+	position: relative;
+}
+
+input.form-control {
+	display: block;
+	position: relative;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-left: 4px solid #ccc;
+	background: #fff;
+	padding: 7px 9px;
+	color: #333;
+	font-family: sans-serif;
+	outline: 0;
+}
+
+input.form-control:focus {
+	border-color: #bbb;
+	border-left-color: #0080ff;
+}
+
+input.disabled {
+	background: #eee;
+	border-color: #999;
+	color: #888;
+}
+
+input.disabled:focus {
+	border-color: #999;
+	color: #eee;
+}
+
+.form-group {
+	display: block;
+	padding: 1px 0;
+	margin-top: 15px;
+}
+
+.form-group:first-child {
+	margin-top: 5px;
+}
+
+.form-group label {
+	font-weight: 600;
+	display: block;
+	margin-bottom: 4px;
+}
+
+.form-group label small {
+	color: #bbb;
+	font-size: 0.8em;
+	display: inline-block;
+	margin-left: 6px;
+}
+
+.form-group.addon .input-addon span {
+	background: #fff;
+	display: inline-block;
+	margin-top: 0;
+	background: #eee;
+	padding: 5px;
+	float: left;
+	width: 10%;
+	text-align: center;
+}
+
+.form-group.addon .form-control {
+	display: inline-block;
+	padding: 12px 15px;
+	border: none;
+	margin: 0;
+	border-left: 4px solid #ccc;
+	background: #fff;
+	color: #333;
+	font-family: sans-serif;
+	outline: 0;
+	float: left;
+	width: 90%;
+}
+
+.form-group.addon .input-addon {
+	border: 1px solid #ccc;
+	background: #fff;
+	display: table;
+	background: #eee;
+	width: 100%;
+}
+
+.form-group.addon .form-control:focus {
+	border-color: #0080ff;
+}
+
+select *,
+select {
+	cursor: pointer;
+}

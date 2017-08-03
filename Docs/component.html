@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Component & MAGO Design : designed by team Omyim Inc. [TH]</title>
+	
+	<!--
+		
+		|##|###########|##|
+		|##|###########|##|
+		|##|	####   |##|
+		|##|	####   |##|
+		|##|	####   |##|
+		|##|	####   |##|	
+
+		Designed By : <omyim.inc@gmail.com>
+
+	-->
+
+	<!-- StyleSheets -->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/output.css">
+	<link rel="stylesheet" href="../css/button.css">
+	<link rel="stylesheet" href="../css/navbar.css">
+	<link rel="stylesheet" href="../css/grid-system.css">
+	<link rel="stylesheet" href="../css/forms.css">
+	<link rel="stylesheet" href="../css/helpers.css">
+	<link rel="stylesheet" href="../css/breadcrumb.css">
+	<link rel="stylesheet" href="../css/navtab.css">
+	<link rel="stylesheet" href="../css/card.css">
+
+	<!-- JavaScripts -->
+	<script type="text/javascript" src="../js/html5shiv.min.js"></script>
+	<script type="text/javascript" src="../js/html5shiv-printshiv.min.js"></script>
+
+	<!-- Style -->
+	<style type="text/css">
+		body {
+			background-image: url(img/background.jpg); 
+		}
+		pre.code {
+			display: block;
+			position: relative;
+			margin-top: 5px;
+			background: #eee;
+			border: 1px solid #ccc;
+			padding: 12px 13px;
+			font-size: 1.1em;
+			overflow-y: hidden;
+			font-family: monospace;
+			line-height: 1.45em;
+
+			-webkit-text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+			-moz-text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+			text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+			font-weight: bold;
+		}
+		pre.code::first-line {
+			color: green;
+			background: #e9e9e9;
+		}
+		pre.code::first-letter { background: #ccc; }
+
+		@media screen and (max-width: 767px) {
+			pre.code {
+				overflow-y: none;
+				font-size: 0.9em;
+			}
+		}
+
+		code {
+			display: inline-block;
+			background: #ffdee4;
+			color: #ae0023;
+			font-weight: bold;
+			padding: 1px 6px;
+			-webkit-border-radius: 6px;
+			-moz-border-radius: 6px;
+			border-radius: 6px;
+		}
+
+		fieldset {
+			border: 1px solid #ccc;
+			padding: 12px 15px;
+			position: relative;
+		}
+		fieldset:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: #fff;
+			padding: 0 8px;
+			content: "ตัวอย่าง";
+			border: 1px solid #ccc;
+			border-right: none;
+			border-top: none;
+			background: #eee;
+		}
+		.col-1 p {
+			display: block;
+			background: #ccc;
+			color: #444;
+		}
+		.col-1:first-child p {
+			background: #bbb;
+		}
+		.auto-margin li {
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="text-fixed-top-left">
+		<h3>&nbsp;Mago Develope with Slimer CSS <small>ทำมาเฉพาะหน้าจอใหญ่</small></h3>
+	</div>
+	<div class="mg-t-30"></div>
+	<div class="clearfix"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-10">
+				<nav class="navbar navbar-inverse">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a href="https://www.github.com/Omyim/mago-css" class="navbar-link">Mago</a>
+						</div>
+						<ul class="navbar-menu navbar-right">
+							<li>
+								<a href="JavaScript: void(0);">ผู้พัฒนา</a>
+								<ul class="navbar-dropdown">
+									<li><a href="#framy">@Framy</a></li>
+									<li><a href="https://www.facebook.com/OMYIM-329703177473578/notifications/">ทีมงาน Omyim Inc.</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="JavaScript:void(0);">ตัวเลือก</a>
+								<ul class="navbar-dropdown">
+									<li><a href="#forms">Forms and Buttons</a></li>
+									<li><a href="#breadcrumb">Breadcrumbs</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-3">
+				<ul class="nav nav-vertical nav-inverse">
+					<li><strong><span>รายการเมนู</span></strong></li>
+					<li><a href="overview.html">Overview</a></li>
+					<li><a href="component.html">Component</a></li>
+					<li><a href="https://www.facebook.com/OMYIM-329703177473578/notifications/">Facebook</a></li>
+				</ul>
+				<div class="mg-t-10"></div>
+				<div class="card card-primary" style="width: 100%;">
+					<div class="card-header">
+						<strong>About Framy</strong>
+					</div>
+					<div class="card-body text-center">
+						<img src="img/author-framy.jpg" alt="Kittichai Malain" title="กิตติชัย มาละอินทร์" class="img-center" width="105px" style="margin-bottom: 5px;">
+						<strong>Kittichai Malain</strong>
+						<p>
+							ใน ฐานะที่เป็นผู้ควบคุมทีม ฮาตาริ อมยิ้ม เขาได้ทำงานและพัฒนาสิ่งที่ใช้สร้างเว็บอย่างมากมายเหลือล้นแต่เขาไม่ทราบว่าจะนำตัวไหนมาเผยแพร่บ้าง ใน วันนี้เขาได้เริ่มปล่อยผลงานเขาออกมาเรื่อยๆครับ ตัวนี้คือตัวที่ 3 ที่เขาปล่อยออกมา
+						</p>
+						<p>
+							<strong>ดูผลงานเขาได้ที่ : <a href="https://www.github.com/Omyim/">Github</a></strong>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-7">
+				<div class="card card-default">
+					<div class="card-header">
+						<h2>Component</h2>
+					</div>
+					<div class="card-body">
+						<strong>ตัวเลือกสำหรับการใช้งาน</strong> ตัวเลือกสำหรับการใช้งานมีไม่ค่อยเยอะเท่าไหร่ เนื่องจากไม่ค่อยมีเวลาพัฒนา การใช้งานเราแนะนำให้ท่านได้ใช้ตัวเทมเพลตของเราก่อนที่จะลงมือสร้างเว็บของท่านครับ
+						<pre class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;Mago Template 101&lt;/title&gt;
+
+	&lt;!-- Mago Stylesheet --&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;css/mago.min.css&quot;&gt;
+
+	&lt;!-- HTML5Shiv --&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;../js/html5shiv.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;../js/html5shiv-printshiv.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt;Hello, World !&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+						<p id="forms">
+							<h1>Forms</h1>
+							<p>
+								ฟอร์มและปุ่มก็เป็นสิ่งหนึ่งที่สำคัญในการสร้างเว็บไซต์ ดังนั้นเราจึงต้องทำให้ออกมาดุดีและรองรับหลายบราวเซอร์ให้มากที่สุดเท่าที่ดีจะทำได้ได้ครับ การเรียกใช้งานคลาสก็เหมือนกับ ของ <strong>Bootstrap 3</strong> คือ <code>.form-group</code> <code>.form-control</code>
+							</p>
+							<p>
+								<strong>Example</strong> <br />
+								<fieldset>
+									<form>
+										<div class="form-group">
+											<label for="example-textbox-1">Username : </label>
+											<input type="text" id="example-textbox-1" class="form-control" placeholder="Username ...">
+										</div>
+										<div class="form-group">
+											<label for="example-textbox-2">Password : </label>
+											<input type="password" id="example-textbox-2" class="form-control" placeholder="Password ...">
+										</div>
+										<div class="form-group">
+											<input type="submit" class="button th-primary" value="Submit">
+											<input type="reset" class="button th-danger" value="Reset">
+										</div>
+									</form>
+								</fieldset>
+							</p>
+							<p>
+								<strong>Usage</strong> <br>
+								<pre class="code">
+&lt;form&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;label for=&quot;example-textbox-1&quot;&gt;Username : &lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;example-textbox-1&quot; class=&quot;form-control&quot; placeholder=&quot;Username ...&quot;&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;label for=&quot;example-textbox-2&quot;&gt;Password : &lt;/label&gt;
+		&lt;input type=&quot;password&quot; id=&quot;example-textbox-2&quot; class=&quot;form-control&quot; placeholder=&quot;Password ...&quot;&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;form-group&quot;&gt;
+		&lt;input type=&quot;submit&quot; class=&quot;button th-primary&quot; value=&quot;Submit&quot;&gt;
+		&lt;input type=&quot;reset&quot; class=&quot;button th-danger&quot; value=&quot;Reset&quot;&gt;
+	&lt;/div&gt;
+&lt;/form&gt;</pre>
+							</p>
+							<p>
+								<strong>Addon in input</strong> <br>
+								<p>
+									Addon คือสิ่งที่เพิ่มมาเรื่อยสามารถแก้ไขได้ตลอด Addon ในฟอร์มสามารถใช้งานได้อย่างง่ายๆ ให้ลองสังเกตุจากคลาสดูครับ
+								</p>
+								<p>
+									<strong>Example</strong> <br>
+									<fieldset>
+										<form>
+											<div class="form-group addon">
+												<label>Country</label>
+												<div class="input-addon">
+													<span>Country</span>
+													<select class="form-control">
+														<option>Select Country..</option>
+														<option>Thailand</option>
+														<option>Laos</option>
+													</select>
+												</div>
+											</div>
+										</form>
+									</fieldset>
+								</p>
+								<p>
+									ในฟอร์มจะพบว่ามีคำนำหน้าสามารถใช้แทน Label ได้เลยและสวยงามด้วย เราใช้คลาส <code>.form-group addon</code> <br>
+									<strong>Usage</strong>
+								</p>
+								<p>
+									<pre class="code">
+&lt;div class=&quot;form-group addon&quot;&gt;
+	&lt;label&gt;Country&lt;/label&gt;
+	&lt;div class=&quot;input-addon&quot;&gt;
+		&lt;span&gt;Country&lt;/span&gt;
+		&lt;select class=&quot;form-control&quot;&gt;
+			&lt;option&gt;Select Country..&lt;/option&gt;
+			&lt;option&gt;Thailand&lt;/option&gt;
+			&lt;option&gt;Laos&lt;/option&gt;
+		&lt;/select&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+								</p>
+							</p>
+							<br>
+							<p>
+								<h2>Buttons</h2>
+								<p>
+									ตัวเลือกสำหรับการใช้งานปุ่มของเรามีอยู่ เท่ากันกับ Bootstrap นั่นก็หมายความว่ามีทั้งหมด 6 รูปแบบ การเรียกใช้งานรูปแบบทั้งหมดจะต้องเรียกใช้งานคลาส <code>.button</code> ครับเหากใครต้องการใช้งานรูปแบบปกติเรียกใช้งานแบบนี้ครับ <code>.button</code> หากจะเรียกใช้รูปแบบอื่นต้องใส่เพิ่มจากเก่ามาเป็น <code>.button th-ชื่อรูปแบบ</code>
+								</p>
+								<p>
+									<strong>Example</strong>
+									<fieldset>
+										<button type="button" class="button">Default</button>
+										<button type="button" class="button th-primary">Primary</button>
+										<button type="button" class="button th-info">Info</button>
+										<button type="button" class="button th-success">Success</button>
+										<button type="button" class="button th-danger">Danger</button>
+										<button type="button" class="button th-warning">Warning</button>
+									</fieldset>
+								</p>
+								<p>
+									<strong>Usage</strong>
+									<pre class="code">
+&lt;button type=&quot;button&quot; class=&quot;button&quot;&gt;Default&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button th-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button th-info&quot;&gt;Info&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button th-success&quot;&gt;Success&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button th-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button th-warning&quot;&gt;Warning&lt;/button&gt;</pre>
+								</p>
+							</p>
+						</p>
+						<p id="breadcrumb">
+							<h1>Breadcrumb</h1>
+							<p>
+								Breadcrumb คือการบอกตำแหน่งของหน้าเพื่อให้รู้ว่าตอนนี้ท่านกำลังรับชมอยู่ที่หน้าไหนประเภทอะไร ทั้งนี้ Breadcrumb เราทำออกมาสองรูปแบบครับ <code>.breacrumb</code> (ปกติสีออกเทา) <code>.breadcrumb .breadcrumb-inverse</code> (รูปแบบที่สองสีดำอ่อน)
+							</p>
+							<p>
+								<strong>Example</strong>
+								<fieldset>
+									<div class="breadcrumb">
+										<a href="JavaScript:void(0);"><span>หน้าหลัก</span></a>
+										<a href="JavaScript:void(0);" class="active"><span>หน้าที่สอง</span></a>
+									</div> <br>
+									<strong>รูปแบบที่สอง</strong>
+									<div class="breadcrumb breadcrumb-inverse">
+										<a href="JavaScript:void(0);"><span>หน้าหลัก</span></a>
+										<a href="JavaScript:void(0);" class="active"><span>หน้าที่สอง</span></a>
+									</div>
+								</fieldset>
+							</p>
+							<p>
+								จากตัวอย่างท่านจะสังเกตุพบว่ามันมีจุดเด่นที่คำว่า <strong>หน้าที่สอง</strong> เนื่องจากเราได้ทำการใส่คลาส <code>.active</code> เข้าไปใน Element
+							</p>
+							<p>
+								<strong>Usage</strong>
+								<pre class="code">
+&lt;div class=&quot;breadcrumb&quot;&gt;
+	&lt;a href=&quot;JavaScript:void(0);&quot;&gt;&lt;span&gt;หน้าหลัก&lt;/span&gt;&lt;/a&gt;
+	&lt;a href=&quot;JavaScript:void(0);&quot; class=&quot;active&quot;&gt;&lt;span&gt;หน้าที่สอง&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;-- แบบที่สอง --&gt;
+&lt;div class=&quot;breadcrumb breadcrumb-inverse&quot;&gt;
+	&lt;a href=&quot;JavaScript:void(0);&quot;&gt;&lt;span&gt;หน้าหลัก&lt;/span&gt;&lt;/a&gt;
+	&lt;a href=&quot;JavaScript:void(0);&quot; class=&quot;active&quot;&gt;&lt;span&gt;หน้าที่สอง&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;</pre>
+							</p>
+						</p>
+						<br>
+						<p id="card">
+							<h1>Card</h1>
+							<p>
+								การ์ดคือการเรียกใช้งานรูปแบบใบเนื้อหาตัวอย่างสามารถดูได้จากข้อมูลส่วนตัวของผมครับ การเรียกใช้งานคลาส <code>.card card-ชื่อรูปแบบ</code> รูปแบบของ card มีทั้งหมด 6 แบบคือ <code>.card-default, .card-primary, .card-info, .card-success, .card-danger, .card-warning</code> การเรียกใช้ส่วนหัวของการ์ด <code>.card-header</code> การเรียกใช้งานส่วนเนื้อหา <code>.card-body</code>
+							</p>
+							<p>
+								<strong>Example</strong>
+								<fieldset>
+									<div class="card card-default">
+										<div class="card-header">
+											<h3>Card Sample</h3>
+										</div>
+										<div class="card-body">
+											Content <br>
+											<button type="button" class="button th-primary is-sm" style="position: absolute;right: 25px;bottom: 10px;">Show more..</button>
+										</div>
+									</div> <br>
+									<strong>แบบอื่นๆ</strong>
+									<div class="card card-danger">
+										<div class="card-header">
+											<h3>Card Sample</h3>
+										</div>
+										<div class="card-body">
+											Content <br>
+											<button type="button" class="button is-sm" style="position: absolute;right: 25px;bottom: 10px;">Show more..</button>
+										</div>
+									</div>
+								</fieldset>
+							</p>
+							<p>
+								<strong>Usage</strong>
+								<pre class="code">
+&lt;div class=&quot;card card-default&quot;&gt;
+	&lt;div class=&quot;card-header&quot;&gt;
+		&lt;h3&gt;Card Sample&lt;/h3&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;card-body&quot;&gt;
+		Content &lt;br&gt;
+		&lt;button type=&quot;button&quot; class=&quot;button th-primary is-sm&quot; style=&quot;position: absolute;right: 25px;bottom: 10px;&quot;&gt;Show more..&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+							</p>
+						</p> <br>
+						<p id="navbar">
+							<h1>Navbar</h1>
+							<p>
+								Navbar ก็ถือได้ว่าเป็นส่วนสำคัญของเว็บไซต์เลยทีเดียวหากไม่มี Navbar หรือ Navigation ติดเว็บเว็บของคุณต้องตายแน่ๆ เพราะมันคือส่วนเมนูนั่นเอง
+							</p>
+							<p>
+								<strong>Example</strong>
+								<nav class="navbar navbar-default">
+									<div class="container">
+										<div class="navbar-header">
+											<a href="#" class="navbar-link">Brand</a>
+										</div>
+										<div class="navbar-menu">
+											<ul class="navbar-nav">
+												<li><a href="#">Menu</a></li>
+												<li>
+													<a href="#">Dropdown</a>
+													<ul class="navbar-dropdown">
+														<li>
+															<a href="#">Item 1</a>
+															<ul class="navbar-dropdown">
+																<li><a href="#">Item 1 in Item 1</a></li>
+															</ul>	
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</nav>
+							</p>
+							<p>
+								<strong>Usage</strong>
+								<pre class="code">
+&lt;nav class=&quot;navbar navbar-default&quot;&gt;
+	&lt;div class=&quot;container&quot;&gt;
+		&lt;div class=&quot;navbar-header&quot;&gt;
+			&lt;a href=&quot;#&quot; class=&quot;navbar-link&quot;&gt;Brand&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;navbar-menu&quot;&gt;
+			&lt;ul class=&quot;navbar-nav&quot;&gt;
+				&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Menu&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;
+					&lt;a href=&quot;#&quot;&gt;Dropdown&lt;/a&gt;
+					&lt;ul class=&quot;navbar-dropdown&quot;&gt;
+						&lt;li&gt;
+							&lt;a href=&quot;#&quot;&gt;Item 1&lt;/a&gt;
+							&lt;ul class=&quot;navbar-dropdown&quot;&gt;
+								&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item 1 in Item 1&lt;/a&gt;&lt;/li&gt;
+							&lt;/ul&gt;	
+						&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/nav&gt;</pre>
+							</p>
+							<p>
+								หากท่านต้องการให้เมนูย้ายไปอยู่ทางขวามือให้เปลี่ยนจากคลาส <code>.navbar-menu</code> เป็น <code>.navbar-menu .navbar-right</code> และการใช้อีกสีหนึ่ง
+							</p>
+							<p>
+								<strong>Example</strong>
+								<nav class="navbar navbar-inverse">
+									<div class="container">
+										<div class="navbar-header">
+											<a href="#" class="navbar-link">Brand</a>
+										</div>
+										<div class="navbar-menu navbar-right">
+											<ul class="navbar-nav">
+												<li><a href="#">Menu</a></li>
+												<li>
+													<a href="#">Dropdown</a>
+													<ul class="navbar-dropdown">
+														<li>
+															<a href="#">Item 1</a>
+															<ul class="navbar-dropdown">
+																<li><a href="#">Item 1 in Item 1</a></li>
+															</ul>	
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</nav>
+							</p>
+							<p>
+								<strong>Usage</strong>
+								<pre class="code">
+&lt;nav class=&quot;navbar navbar-inverse&quot;&gt;
+	...
+&lt;/nav&gt;</pre>
+							</p>
+						</p> <br>
+						<p id="navtab">
+							<h1>Navigation Tab</h1>
+							<p>
+								Navigation Tab คือแท็บสำหรับการคลิกที่สามารถเรียงต่อกันหรือแสดงกันทีละบรทัดก็ได้ สำหรับการกำหนดว่าจะให้เรียงต่อกันหรือเรียงทีละบรรทัดให้กำหนดจากส่วนนี้ครับ <code>.nav-vertical</code> หรือ <code>.nav-horizontal</code> และกำหนดหนดรูปแบบเพื่อการแสดงผลในแต่ละรูปแบบก็มีสองรูปแบบคือ <code>.nav-default</code> และ <code>.nav-inverse</code>
+							</p>
+							<p>
+								<strong>Example</strong>
+								<ul class="nav nav-vertical nav-default">
+									<li><a href="#">Tab 1</a></li>
+									<li><a href="#">Tab 2</a></li>
+									<li><a href="#">Tab 3</a></li>
+								</ul> <br>
+								<strong>Example 2</strong>
+								<ul class="nav nav-horizontal nav-default">
+									<li><a href="#">Tab 1</a></li>
+									<li><a href="#">Tab 2</a></li>
+									<li><a href="#">Tab 3</a></li>
+								</ul>
+							</p>
+							<p>
+								หากต้องการเปลี่ยนจากสีธรรมดาการเป็นสีดำก็ได้ครับเปลี่ยนจาก <code>.nav-default</code> เป็น <code>.nav-inverse</code>
+							</p>
+						</p> <br>
+						<p id="grid-system">
+							<h1>Grid System</h1>
+							<p>
+								Grid System ก็เป็นส่วนสำคัญในการสร้างเว็บไซต์เหมือนกันครับเพราะเราจะต้องกำหนดคอลัมน์สำหรับการแสดงผลอาจจะยากหรือลำบากหากใครที่ใช้ Table ไม่ครับหากใช้ Grid เป็นจะง่ายต่อการจัดวางหน้าเว็บมากทางเราได้กำหนดมาเพียง 10 คอลัมน์
+							</p>
+							<p>
+								<strong>Example</strong>
+							</p>
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-1">
+										<p>Column 1</p>
+									</div>
+									<div class="col-1">
+										<p>Column 1</p>
+									</div>
+									<div class="col-1">
+										<p>Column 1</p>
+									</div>
+									<div class="col-1">
+										<p>Column 1</p>
+									</div>
+									<div class="col-1">
+										<p>Column 1</p>
+									</div>
+									<div class="col-1">
+										<p>Column 1</p>
+									</div>
+									<div class="col-1">
+										<p>Column 1</p>
+									</div>
+									<div class="col-1">
+										<p>Column 1</p>
+									</div>
+									<div class="col-1">
+										<p>Column 1</p>
+									</div>
+									<div class="col-1">
+										<p>Column 1</p>
+									</div>
+								</div>
+							</div>
+							<p>
+								<strong>Usage</strong>
+								<pre class="code">
+&lt;div class=&quot;container-fluid&quot;&gt;
+	&lt;div class=&quot;row&quot;&gt;
+		&lt;div class=&quot;col-1&quot;&gt;
+			&lt;p&gt;Column 1&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-1&quot;&gt;
+			&lt;p&gt;Column 1&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-1&quot;&gt;
+			&lt;p&gt;Column 1&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-1&quot;&gt;
+			&lt;p&gt;Column 1&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-1&quot;&gt;
+			&lt;p&gt;Column 1&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-1&quot;&gt;
+			&lt;p&gt;Column 1&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-1&quot;&gt;
+			&lt;p&gt;Column 1&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-1&quot;&gt;
+			&lt;p&gt;Column 1&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-1&quot;&gt;
+			&lt;p&gt;Column 1&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;col-1&quot;&gt;
+			&lt;p&gt;Column 1&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+							</p>
+						</p> <br>
+						<p id="helper">
+							<h1>Helpers Classes</h1>
+							<p>
+								Helpers Classess ก็ คือ คลาสที่เอาไว้ช่วยในการทำงานต่างๆเช่น ทำตัวหนังสือให้อ่อน ทำตัวหนังสือให้ชิดซ้าย ทำตัวหนังสือให้ชิดขวา
+							</p>
+							<p>
+								<strong>รายการสำหรับเลือกใช้งาน</strong>
+								<ul class="auto-margin">
+									<li>
+										<code>.text-fixed .text-fixed-top</code>
+									</li>
+									<li>
+										<code>.text-fixed .text-fixed-bottom</code>
+									</li>
+									<li>
+										<code>.text-fixed-top-right</code>
+									</li>
+									<li>
+										<code>.text-fixed-top-left</code>
+									</li>
+									<li>
+										<code>.text-fixed-bottom-right</code>
+									</li>
+									<li>
+										<code>.text-fixed-bottom-left</code>
+									</li>
+									<li>
+										<code>.help-block</code>
+									</li>
+									<li>
+										<code>.text-float-right</code>
+									</li>
+									<li>
+										<code>.text-float-left</code>
+									</li>
+									<li>
+										<code>.text-size-sm</code>
+									</li>
+									<li>
+										<code>.text-size-md</code>
+									</li>
+									<li>
+										<code>.text-size-lg</code>
+									</li>
+									<li>
+										<code>.text-right</code>
+									</li>
+									<li>
+										<code>.text-left</code>
+									</li>
+									<li>
+										<code>.text-center</code>
+									</li>
+									<li>
+										<code>.mg-t-(10-100)</code>
+									</li>
+								</ul>
+							</p>
+						</p>
+						<p>
+							<p class="text-center">
+								Designed by : กิตติชัย มาละอินทร์
+							</p>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

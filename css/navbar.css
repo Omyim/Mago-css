@@ -1,0 +1,231 @@
+/**
+	* Navigation
+	* by kittichai malain
+*/
+.container {
+	display: block;
+	width: 73%;
+	margin: 0 auto;
+}
+
+.container-fluid {
+	display: block;
+	width: 96%;
+	margin: 0 auto;
+}
+
+.navbar {
+	display: table;
+	position: relative;
+	background: #292929;
+	padding: 0;
+	width: 100%;
+	margin-bottom: 11px;
+	z-index: 1;
+	color: #eee;
+	border-top: 3px solid transparent;
+
+	-webkit-border-radius: 6px 6px 0 0;
+	-moz-border-radius: 6px 6px 0 0;
+	-ms-border-radius: 6px 6px 0 0;
+	-o-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+}
+
+.navbar-header,
+.navbar-menu {
+	display: inline-block;
+	float: left;
+	max-width: 49.5%;
+}
+
+.navbar-right {
+	float: right;
+}
+
+
+.navbar-link,
+.navbar-menu li a {
+	display: inline-block;
+	padding: 21px 17px;
+	-webkit-background-size: 100% 200%;
+    background-size: 100% 200%;
+    background-image: -webkit-linear-gradient(to bottom, trasparent 50%, transparent 50%);
+    background-image: -moz-linear-gradient(to bottom, trasparent 50%, transparent 50%);
+    background-image: -ms-linear-gradient(to bottom, trasparent 50%, transparent 50%);
+    background-image: -o-linear-gradient(to bottom, trasparent 50%, transparent 50%);
+    background-image: linear-gradient(to bottom, trasparent 50%, transparent 50%);
+    transition: background-position 0.3s;
+}
+
+.navbar-menu li {
+	float: left;
+}
+
+.navbar-menu li a:hover {
+	background-position: 0 -100%;
+}
+
+.navbar-menu li a.to-top:hover {
+	background-position: 0 100%;
+}
+
+.navbar-dropdown {
+	display: block;
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+
+	-webkit-transition: 0.3s all;
+	-moz-transition: 0.3s all;
+	-o-transition: 0.3s all;
+	transition: 0.3s all;
+	border: 1px solid trasparent;
+
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.navbar-dropdown li {
+	float: none;
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
+.navbar-dropdown li a {
+	display: block;
+	width: 100%;
+	padding: 8px 13px;
+
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	-ms-border-radius: 0 0 4px 4px;
+	-o-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+
+.navbar-dropdown li a:first-child {
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	-ms-border-radius: 4px 4px 0 0;
+	-o-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
+.navbar-menu li a:hover + .navbar-dropdown,
+.navbar-dropdown:hover {
+	visibility: visible;
+	opacity: 1;
+}
+
+.navbar-dropdown li .navbar-dropdown {
+	right: -150px;
+	top: 10px;
+	margin: 0;
+}
+
+/**
+	* Theme Navbar
+	* for designed
+*/
+
+/* Default */
+.navbar-default {
+	background: #f5f5f5;
+	color: #333;
+	border-top-color: #4aefc6;
+}
+
+.navbar-default .navbar-menu li .navbar-dropdown li a,
+.navbar-default .navbar-nav li a {
+	background-image: -webkit-linear-gradient(to bottom, #fff 50%, #eee 50%);
+    background-image: -moz-linear-gradient(to bottom,#fff 50%, #eee 50%);
+    background-image: -ms-linear-gradient(to bottom,#fff 50%, #eee 50%);
+    background-image: -o-linear-gradient(to bottom,#fff 50%, #eee 50%);
+    background-image: linear-gradient(to bottom,#fff 50%, #eee 50%);
+}
+
+.navbar-default .navbar-menu li a:hover {
+	background-color: #eee;
+}
+
+.navbar-default .navbar-dropdown {
+	border-top: 1px solid #4aefc6;
+	border-right: 1px solid #66ffd8;
+	border-left: 1px solid #66ffd8;
+	border-bottom: 1px solid #4aefc6;
+}
+
+/* Inverse */
+.navbar-inverse {
+	background: #34495e;
+	color: #eee;
+	border-top-color: #0e1e2e;
+}
+
+.navbar-inverse .navbar-menu li a,
+.navbar-inverse .navbar-link {
+	color: #e9e9e9;
+}
+
+.navbar-inverse .navbar-menu li a:hover {
+	background-color: #324559;
+	background-image: -webkit-linear-gradient(to bottom, #495f76 50%, #324559 50%);
+    background-image: -moz-linear-gradient(to bottom,#495f76 50%, #324559 50%);
+    background-image: -ms-linear-gradient(to bottom,#495f76 50%, #324559 50%);
+    background-image: -o-linear-gradient(to bottom,#495f76 50%, #324559 50%);
+    background-image: linear-gradient(to bottom,#495f76 50%, #324559 50%);
+}
+
+.navbar-inverse .navbar-dropdown {
+	border-top: 1px solid #324559;
+	border-right: 1px solid #495f76;
+	border-left: 1px solid #495f76;
+	border-bottom: 1px solid #324559;
+}
+
+.navbar-inverse .navbar-dropdown li a {
+	background-image: none;
+	background-color: #f5f5f5;
+	color: #888;
+}
+
+.navbar-inverse .navbar-dropdown li a:hover {
+	color: #fff;
+}
+
+/**
+	* Type for Navbar
+	* typed
+*/
+.navbar-fixed-top {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	width: 100%;
+}
+
+.navbar-fixed-bottom {
+	position: fixed;
+	z-index: 1;
+	bottom: 0;
+	width: 100%;
+
+	-webkit-border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	-ms-border-radius: 0 0 6px 6px;
+	-o-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+}
+
+.navbar-fixed-bottom .navbar-dropdown {
+	top: -50px;
+}
+
+.navbar-fixed-bottom .navbar-dropdown li .navbar-dropdown {
+	top: -10px;
+}

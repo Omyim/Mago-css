@@ -1,0 +1,57 @@
+/**
+	* Breadcrumbs 
+	* by Kittichai Malain
+*/
+
+.breadcrumb {
+	display: block;
+	position: relative;
+	background: #eee;
+	border: 1px solid #e9e9e9;
+	margin-top: 12px;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.breadcrumb a {
+	display: inline-block;
+	padding: 9px 0 9px 8px;
+	color: #ccc;
+	text-decoration: none;
+}
+
+.breadcrumb a:hover,
+.breadcrumb a.active:hover {
+	color: #999;
+}
+
+.breadcrumb a:after {
+	color: #bbb;
+	display: inline-block;
+	margin: 0 6px;
+	content: "/";
+	cursor: default;
+	padding: 0;
+}
+
+.breadcrumb a.active {
+	color: #666;
+	font-weight: 550;
+}
+
+.breadcrumb-inverse {
+	background: #222;
+	border-color: #292929;
+}
+
+.breadcrumb-inverse a {
+	color: #ccc;
+}
+
+.breadcrumb-inverse a.active {
+	color: #fff;
+}

@@ -1,0 +1,122 @@
+/**
+	* Helpers Class
+	* by Kittichai malain
+*/
+
+.text-fixed {
+	position: fixed;
+}
+
+.text-fixed-top {
+	top: 0;
+}
+
+.text-fixed-bottom {
+	bottom: 0;
+}
+
+.text-fixed-top-right {
+	right: 0;
+	top: 0;
+}
+
+.text-fixed-top-left {
+	left: 0;
+	top: 0;
+}
+
+.text-fixed-bottom-right {
+	bottom: 0;
+	right: 0;
+}
+
+.text-fixed-bottom-left {
+	bottom: 0;
+	left: 0;
+}
+
+/* Help Text */
+
+p.help-block {
+	color: #292929;
+
+	-webkit-opacity: 0.6;
+	-moz-opacity: 0.6;
+	-ms-opacity: 0.6;
+	-o-opacity: 0.6;
+	opacity: 0.6;
+}
+
+.text-float-right {
+	float: right;
+}
+
+.text-float-left {
+	float: left;
+}
+
+.text-size-sm {
+	font-size:  0.6em;
+}
+
+.text-size-md {
+	font-size: 1.2em;
+}
+
+.text-size-lg {
+	font-size: 1.5em;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/* Margin */
+
+.mg-t-10 {
+	margin-top: 10px;
+}
+
+.mg-t-20 {
+	margin-top: 20px;
+}
+
+.mg-t-30 {
+	margin-top: 30px;
+}
+
+.mg-t-40 {
+	margin-top: 40px;
+}
+
+.mg-t-50 {
+	margin-top: 50px;
+}
+
+.mg-t-60 {
+	margin-top: 60px;
+}
+
+.mg-t-70 {
+	margin-top: 70px;
+}
+
+.mg-t-80 {
+	margin-top: 80px;
+}
+
+.mg-t-90 {
+	margin-top: 90px;
+}
+
+.mg-t-100 {
+	margin-top: 100px;
+}

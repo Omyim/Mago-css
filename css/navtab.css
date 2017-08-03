@@ -1,0 +1,97 @@
+/**
+	* Navtab list styles
+	* by Kittichai Malain
+*/
+
+.nav {
+	display: table;
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	border: 1px solid transparent;
+	background: transparent;
+}
+
+.nav-vertical,
+.nav-horizontal,
+.nav li a {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.nav-vertical li {
+	display: block;
+	float: none;
+	width: 100%;
+	position: relative;
+}
+
+.nav-horizontal li {
+	float: left;
+	margin-right: 15px;
+}
+
+.nav-default {
+	background: #fff;
+	border-color: #ccc;
+}
+
+.nav-default li a {
+	display: block;
+	padding: 7px 13px;
+	color: #494949;
+	background: #eee;
+	border-top: 1px solid #ccc;
+}
+
+.navbar-default li:first-child a {
+	border-top: none;
+}
+
+.navbar-default li:nth-child(odd) a {
+	background: #eee;
+}
+
+.nav.nav-horizontal {
+	border: none;
+}
+
+.nav.nav-vertical.nav-default li a {
+	background: #fff;
+}
+
+.nav.nav-vertical.nav-default li a:hover {
+	background: #eee;
+}
+
+.nav.nav-horizontal li a:hover {
+	background: #f5f5f5;
+}
+
+.nav.nav-vertical.nav-inverse {
+	border-color: #292929;
+	background: #222;
+}
+
+.nav.nav-vertical.nav-inverse li a,
+.nav.nav-horizontal.nav-inverse li a {
+	display: block;
+	padding: 7px 13px;
+	color: #ccc;
+	background: #222;
+	border-top: 1px solid #111;
+}
+
+.nav.nav-vertical.nav-inverse li a:hover,
+.nav.nav-horizontal.nav-inverse li a:hover {
+	background: #333;
+}
+
+.nav li strong {
+	display: inline-block;
+	color: #fff;
+	padding: 4px 5px;
+}
